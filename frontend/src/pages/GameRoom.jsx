@@ -54,7 +54,7 @@ function GameRoom() {
     }
 
     // Initialize socket connection
-    socketRef.current = io.connect('http://backend:3000');
+    socketRef.current = io.connect(process.env.VITE_API_BASE_URL);
 
     // Load face-api models
     const loadModels = async () => {
